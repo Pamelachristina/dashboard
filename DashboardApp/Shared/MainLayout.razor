@@ -1,0 +1,44 @@
+﻿@inherits LayoutComponentBase
+
+<div class="container-fluid">
+    <div class="row bg-light p-3 mb-3">
+        <div class="col">
+            <h1 class="display-4">User Program Dashboard</h1>
+            <p class="text-muted">Last Updated: @DateTime.Now</p>
+        </div>
+        <div class="col text-right">
+            <div class="form-inline">
+                <label for="date-range" class="mr-2">Date Range:</label>
+                <input type="text" id="date-range" class="form-control mr-3" name="date-range">
+                <label for="category" class="mr-2">Category:</label>
+                <select id="category" class="form-control" name="category">
+                    <option value="all">All</option>
+                    <!-- Add other categories as needed -->
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2 bg-dark text-white p-3">
+            <nav class="nav flex-column">
+                <NavLink class="nav-link text-white" href="/">Overview</NavLink>
+                <NavLink class="nav-link text-white" href="/user-stats">User Stats</NavLink>
+                <NavLink class="nav-link text-white" href="/charts">Charts</NavLink>
+                <NavLink class="nav-link text-white" href="/tables">Tables</NavLink>
+                <NavLink class="nav-link text-white" href="/settings">Settings</NavLink>
+            </nav>
+        </div>
+        <div class="col-md-10">
+            @Body
+        </div>
+    </div>
+
+    <div class="row bg-light p-3 mt-3">
+        <div class="col text-center">
+            <p>Resources: <a href="#">Documentation</a></p>
+            <p>Contact: <a href="mailto:support@example.com">support@example.com</a></p>
+        </div>
+    </div>
+</div>
+
